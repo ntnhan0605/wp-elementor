@@ -1,0 +1,5 @@
+.title-group {display: flex; align-items: center; }
+.title-group .line:first-child {margin-right: 10px; }
+.title-group .line:last-child {margin-left: 10px; }
+.title > a {color: indianred; -webkit-transition: .25s all ease; transition: .25s all ease; }
+.title > a:hover {color: inherit; -webkit-transition: .25s all ease; transition: .25s all ease; }
