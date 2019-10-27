@@ -13,8 +13,9 @@ h1, h2, h3, h4, h5, h5 { font-family: 'Noticia Text', serif; }
 
 .contact-info { font-size: 14px; line-height: 1; color: #fff; -webkit-transition: .25s all ease; transition: .25s all ease; }
 .contact-info * {font-size: inherit; }
-.contact-info:hover { color: var(--link-hover-color); text-decoration: none; }
-.s-btn {width: 33px; height: 33px; -webkit-transition: .25s all ease; transition: .25s all ease; }
+.contact-info:hover { color: #fff; text-decoration: none; }
+.s-btn {width: 33px; height: 33px; display: flex; align-items: center; justify-content: center; -webkit-transition: .25s all ease; transition: .25s all ease; }
+.s-btn:hover { color: #fff !important; }
 
 .header {position: fixed; width: 100%; top: 0px; left: 0px; z-index: 111; box-shadow: 0px 0px 6px #000; }
 .header-top {background-color: #262626; color: #fff; }
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h5 { font-family: 'Noticia Text', serif; }
 .footer {background-color: #2b2b2b; color: #fff; }
 .footer a {color: #fff; -webkit-transition: .25s all ease; transition: .25s all ease; font-size: inherit; }
 .footer a:hover {color: var(--menu-link-hover); text-decoration: none; -webkit-transition: .25s all ease; transition: .25s all ease; }
-.footer-top {padding: 50px 0px 70px; }
+.footer-top {padding: 30px 0px 50px; }
 .footer-bottom {padding: 10px 0px; background: #262626; }
 .footer-bottom p {margin-bottom: 0px; font-size: 0.8em; }
 

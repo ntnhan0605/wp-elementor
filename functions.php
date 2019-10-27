@@ -2,6 +2,8 @@
 require 'inc/init.php';
 require 'ntn-ext/ntn-ext.php';
 
+require 'user/functions.php';
+
 /**
  * WP Elementor Theme Enqueue styles
  *
@@ -56,5 +58,3 @@ function ntn_theme_support() {
 }
 add_action( 'init', 'ntn_theme_support' );
 
-// 22a94811835d6a1283c7bcab5d524c47
-// 1570764513:$P$BX1qAuyKnJHSA2hWh31af0Qby./pNX/ 
