@@ -7,7 +7,7 @@
  ?>
  <?php
 if (is_user_logged_in()) {
-	echo wp_logout_url( '/user-login' );
+	wp_redirect( './user-profile/' );
 } else {
 	echo 'message';
 }
@@ -50,12 +50,15 @@ if (is_user_logged_in()) {
 						user: {
 							log: $(el).find('[name="log"]').val(),
 							pwd: $(el).find('[name="pwd"]').val(),
-							rememberme: $(el).find('[name="rememberme"]').val()
+							rememberme: $(el).find('[name="rememberme"]').val(),
+							redirect_to: $(el).find('[name="redirect_to"]').val()
 						}
 					},
 				})
 				.done(function(r) {
-					console.log(r);
+					if (r === true) {
+						window.location.href = $(el).find('[name="redirect_to"]').val();
+					}
 				})
 				.fail(function() {
 					console.log("error");

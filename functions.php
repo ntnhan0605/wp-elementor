@@ -1,5 +1,6 @@
 <?php
 require 'inc/init.php';
+require 'init/init.php';
 require 'ntn-ext/ntn-ext.php';
 
 require 'user/functions.php';

@@ -19,18 +19,21 @@ if (!function_exists('addRoleUser')) {
 
 add_action( 'wp_ajax_nopriv_loginuser', 'nopriv_loginuser' );
 function nopriv_loginuser() {
+	$user = isset($_POST['user']) ? $_POST['user'] : [];
 	$info = array();
-    $info['user_login'] = $_POST['log'];
-    $info['user_password'] = $_POST['pwd'];
-    $info['remember'] = true;
-
-    $user_signon = wp_signon( $info, false );
-    if (is_user_logged_in()) {
-    	echo json_encode($user_signon);
-    } else {
-    	echo 'false';
-    }
-	die();
+	if (!empty($user)) {
+		$info['user_login'] = $user['log'];
+		$info['user_password'] = $user['pwd'];
+		$info['remember'] = $user['rememberme'];
+	}
+	$user_signon = wp_signon( $info, false );
+	if ($user_signon->exists()) {
+		echo 'true';
+		die();
+	} else {
+		echo 'false';
+		die();
+	}
 }
 
 add_action( 'wp_ajax_loginuser', 'loginuser' );
@@ -82,10 +85,3 @@ function loginuser() {
 // 		}
 // 	}
 // }
-
-if (!function_exists('loginRedirect')) {
-	add_action( 'wp_login', 'loginRedirect' );
-	function loginRedirect() {
-
-	}
-}
