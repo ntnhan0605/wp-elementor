@@ -46,6 +46,7 @@ function themeslug_customize_register( $wp_customize ) {
           'type'      => 'textarea'
       )
   );
+  
 
 }
 add_action( 'customize_register', 'themeslug_customize_register', 110 );
