@@ -4,6 +4,7 @@
 *	Template Name: User login
 *	Template Post Type: page
 */
+get_header();
  ?>
  <?php
 if (is_user_logged_in()) {
@@ -71,3 +72,6 @@ if (is_user_logged_in()) {
 		});
 	});
 </script>
+
+<?php 
+get_footer() ?>
