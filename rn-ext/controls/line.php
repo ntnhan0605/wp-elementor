@@ -1,19 +1,23 @@
 <?php
+
 namespace Elementor;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-class Group_Control_Line extends Group_Control_Base {
+class Group_Control_Line extends Group_Control_Base
+{
 
 	protected static $fields;
 
-	public static function get_type() {
+	public static function get_type()
+	{
 		return 'line';
 	}
 
-	protected function init_fields() {
+	protected function init_fields()
+	{
 		$fields = [];
 
 		$fields['show'] = [
@@ -104,7 +108,8 @@ class Group_Control_Line extends Group_Control_Base {
 		return $fields;
 	}
 
-	protected function get_default_options() {
+	protected function get_default_options()
+	{
 		return [
 			'popover' => false,
 		];
